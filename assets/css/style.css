@@ -1,0 +1,54 @@
+.button{
+    width:100px;
+    height: 100px;
+
+
+}
+img{
+    width:100px;
+height: 100px;
+}
+
+
+body {
+    background:url("../images/bananas.png");
+    line-height: 1.5;
+}
+
+header {
+   
+       background: white;
+       height: 90px;
+       width: 30%;
+   }
+
+
+.instructions {
+background: wheat;
+width: 60%;
+
+}
+.button {
+width: 100px;
+height:100px;
+margin: 10px;
+
+}
+#record {
+    background: whitesmoke;
+    width: 40%;
+}
+
+#targetNumber {
+font-size: 18px;
+background: green;
+width: 40%;
+}
+
+#currentScore {
+    font-size: 18px;
+    background: turquoise;
+    width: 40%;
+
+
+}
