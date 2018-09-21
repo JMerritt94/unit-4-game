@@ -30,11 +30,11 @@
             change.
 
         </p>
-<br>
+        <br>
 
     </div>
     <div id="targetNumber"> Target Number = </div>
-<br>
+    <br>
     <div id="record">
         <div id=wins>wins: </div>
         <div id=losses>losses: </div>
@@ -44,105 +44,7 @@
 
     <div id="currentScore">Current Score = </div>
 
-    <script>
-        // first i need to define some variables, I will need one called targetNumber, an arrayfor crystalValues, one for currentScore, and one for wins and losses,
-
-        var currentScore;
-        var totalWins=0;
-        var totalLosses=0 ;
-        var crystalValues;
-
-
-        var targetNumber = Math.floor(Math.random() * 120 + 18)
-        console.log(targetNumber);
-        $("#targetNumber").text("Target Number = " + targetNumber);
-
-        var crystalValues = [];
-        for (var i = 0; i < 4; i++) {
-            crystalValues.push(Math.round(Math.random() * 11 + 1));
-
-        }
-        function startGame() {
-            currentScore = 0;
-           
-            crystalValues = [];
-
-            for (var i = 0; i < 4; i++) {
-                crystalValues.push(Math.round(Math.random() * 11 + 1));
-            }
-            console.log(crystalValues);
-            $("#wins").text("wins: " + totalWins);
-            $("#losses").text("losses: " + totalLosses)
-
-            targetNumber = Math.floor(Math.random() * 120 + 18)
-        console.log(targetNumber);
-        $("#targetNumber").text("Target Number = " + targetNumber)
-        }
-
-
-
-
-
-        var imgArray = [
-            'assets/images/diamond-clipart-vector.png',
-            'assets/images/emerald.jpg',
-            'assets/images/ruby-clipart-8.png',
-            'assets/images/sapphire.jpg'
-        ];
-
-        for (var i = 0; i < imgArray.length; i++) {
-            var crystalButton = $("<button>");
-            crystalButton.addClass("button crystal");
-            crystalButton.attr("data-number", i);
-
-            // add image inside button
-            crystalButton.append("<img src='" + imgArray[i] + "' alt='Crystal " + (i + 1) + "'>");
-
-            $("#crystal").append(crystalButton)
-        }
-
-
-
-
-
-
-
-
-        $(".crystal").on("click", function () {
-            var crystalIndex = $(this).attr("data-number");
-            console.log(crystalIndex);
-            currentScore = currentScore + crystalValues[crystalIndex]
-            console.log(currentScore)
-            $("#currentScore").text("Current Score=" + currentScore)
-
-            if (currentScore > targetNumber) {
-                totalLosses++;
-                $("#losses").text("losses: " + totalLosses)
-                startGame();
-
-            }
-            else if (currentScore === targetNumber) {
-                totalWins++;
-                $("#wins").text("wins: " + totalWins)
-                startGame();
-            }
-
-        })
-        startGame();
-
-  // use the index to get the value from the array here
-
-
-
-    //second i will need to make a RNG for the crsytal values and the targetNumber. I can do this with Math.Random and create a function that resets these values after each game.
-    // i can run a foor loop that runs four times to generate four numbers for the array as a function.
-
-
-    //third i will need to make clicking the crystals append the assigning crystal Value to the current score.
-
-
-    //fourth i will need to make a function that starts the whole process over if targetNumber=currentScore or if currentScore>targetNumber.
-    </script>
+    <script type = "text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 
