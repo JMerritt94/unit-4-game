@@ -56,11 +56,6 @@ for (var i = 0; i < imgArray.length; i++) {
 
 
 
-
-
-
-
-
 $(".crystal").on("click", function () {
     var crystalIndex = $(this).attr("data-number");
     console.log(crystalIndex);
